@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Murs-rideaux - Construction Aluminium DZ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-0kP1R0+vFhCwNhw8hDAXN8SYKnQe5Ey3UkzYFYwryM+EmEZowK7N36tUo4hFsz3fslH6Fh0K2MEexJKhk95Fqg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    body.arabic-font {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.2em;}
+    header {
+      background-color: #004785;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    #language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 16px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004785;
+      padding-top: 20px;
+    }
+
+    .description {
+      padding: 20px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .images img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: #8cc63f;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .back-button:hover {
+      background-color: #76b82a;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #8cc63f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Construction Aluminium DZ
+    <select id="language-selector">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+    </select>
+  </header>
+
+  <main>
+    <h1 id="main-title">Murs-rideaux Aluminium</h1>
+    
+    <div class="images">
+      <img src="yacine1.jpg" alt="Mur-rideau en aluminium">
+      <img src="yacine24.jpg" alt="Porte en aluminium 1">
+      <img src="yacine25.jpg" alt="Porte en aluminium 1">
+    </div>
+
+    <div class="description" id="description">
+      Nos murs en aluminium allient robustesse, esthétique moderne et isolation optimale.
+      Adaptés aux constructions contemporaines, ils assurent une excellente étanchéité et une résistance élevée aux conditions climatiques extrêmes.
+      Disponibles dans une variété de finitions et de couleurs, ils sont idéaux pour les projets architecturaux innovants.
+    </div>
+
+    <a class="back-button" href="construction aliminium dz.html" id="back-link">← Retour à l'accueil</a>
+  </main>
+
+  <footer>
+    <span id="contact-text">Vous avez une question ?</span>
+    <a href="contact.html" id="contact-link">Contactez-nous</a>
+    <span id="or-call">ou appelez le</span>
+    <a href="tel:+213556134690">+213 556134690</a>
+    <span id="or">ou</span>
+    <a href="tel:+213662452255">+213 662452255</a>
+    <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:constructionallualgerie@gmail.com">constructionallualgerie@gmail.com</a>
+    <br>
+  
+  </p>
+  <p>
+    <a href="https://www.tiktok.com/@constructionallualgerie" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok" style="font-size: 1.5em; margin-right: 8px;"></i>
+      Suivez-nous sur TikTok
+    </a>
+  </p>
+  <p>&copy; 2025 Construction Aluminium DZ. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        mainTitle: "Murs-rideaux Aluminium",
+        description: "Nos murs en aluminium allient robustesse, esthétique moderne et isolation optimale. Adaptés aux constructions contemporaines, ils assurent une excellente étanchéité et une résistance élevée aux conditions climatiques extrêmes. Disponibles dans une variété de finitions et de couleurs, ils sont idéaux pour les projets architecturaux innovants.",
+        backLink: "← Retour à l'accueil",
+        contactText: "Vous avez une question ?",
+        contactLink: "Contactez-nous",
+        orCall: "ou appelez le",
+        or: "ou"
+      },
+      en: {
+        mainTitle: "Aluminum Curtain Walls",
+        description: "Our aluminum curtain walls combine strength, modern design, and optimal insulation. Perfectly suited for contemporary buildings, they provide excellent sealing and high resistance to extreme weather conditions. Available in a range of finishes and colors, they are ideal for innovative architectural projects.",
+        backLink: "← Back to Home",
+        contactText: "Have a question?",
+        contactLink: "Contact us",
+        orCall: "or call",
+        or: "or"
+      },
+      ar: {
+        mainTitle: "جدران الستارة المصنوعة من الألمنيوم",
+        description: "تجمع جدران الستارة المصنوعة من الألمنيوم بين المتانة والتصميم العصري والعزل الأمثل. مثالية للبنايات الحديثة، توفر إحكامًا ممتازًا ومقاومة عالية للظروف المناخية القاسية. متوفرة بمجموعة متنوعة من التشطيبات والألوان، وهي مثالية للمشاريع المعمارية المبتكرة.",
+        backLink: "← العودة إلى الصفحة الرئيسية",
+        contactText: "هل لديك سؤال؟",
+        contactLink: "اتصل بنا",
+        orCall: "أو اتصل على",
+        or: "أو"
+      }
+    };
+
+    document.getElementById("language-selector").addEventListener("change", function () {
+      const lang = this.value;
+      const t = translations[lang];
+
+      document.getElementById("main-title").textContent = t.mainTitle;
+      document.getElementById("description").textContent = t.description;
+      document.getElementById("back-link").textContent = t.backLink;
+      document.getElementById("contact-text").textContent = t.contactText;
+      document.getElementById("contact-link").textContent = t.contactLink;
+      document.getElementById("or-call").textContent = t.orCall;
+      document.getElementById("or").textContent = t.or;
+
+      document.body.dir = lang === "ar" ? "rtl" : "ltr";
+       if (lang === "ar") {
+    document.body.classList.add("arabic-font");
+  } else {
+    document.body.classList.remove("arabic-font");
+  }
+    });
+  </script>
+
+</body>
+</html>
