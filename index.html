@@ -16,6 +16,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 
    <style>
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem; /* smaller heading on tablets and phones */
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .learn-more-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .header-buttons {
+    top: 10px; /* brings buttons higher */
+    right: 10px;
+    flex-direction: column; /* stack vertically on small screens */
+    gap: 5px;
+  }
+
+  .header-buttons button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
