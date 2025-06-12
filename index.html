@@ -17,12 +17,24 @@
 
    <style>
 @media (max-width: 768px) {
+  header {
+    height: auto; /* permet au header de s'adapter au contenu */
+    padding-top: 100px; /* espace pour les boutons */
+  }
+
+  .header-content {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
   .header-content h1 {
-    font-size: 1.2rem; /* smaller heading on tablets and phones */
+    font-size: 1.6rem;
+    margin-bottom: 10px;
   }
 
   .header-content p {
     font-size: 1rem;
+    margin-bottom: 20px;
   }
 
   .learn-more-btn {
@@ -31,10 +43,11 @@
   }
 
   .header-buttons {
-    top: 10px; /* brings buttons higher */
+    top: 10px;
     right: 10px;
-    flex-direction: column; /* stack vertically on small screens */
+    flex-direction: column;
     gap: 5px;
+    z-index: 5; /* assure qu’ils sont bien au-dessus */
   }
 
   .header-buttons button {
