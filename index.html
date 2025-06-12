@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Aluminium DZ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-0kP1R0+vFhCwNhw8hDAXN8SYKnQe5Ey3UkzYFYwryM+EmEZowK7N36tUo4hFsz3fslH6Fh0K2MEexJKhk95Fqg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    html[lang="ar"] body{
+  font-family: 'Tajawal',  'Segoe UI' , sans-serif;
+  font-size: 1.2em; /* slightly bigger */
+}
+
+    header {
+  position: relative;
+  overflow: hidden;
+  height: 590px; /* ajustable */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.6); /* assombrit la vidéo */
+  z-index: 1;
+  pointer-events: none;
+}
+
+header h1,
+.header-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+    header .header-buttons {
+      position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+    }
+    .header-buttons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.95em;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-family: Clarkson, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+
+.header-buttons button::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  right: 15px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.header-buttons button:hover::after {
+  transform: scaleX(1);
+}
+.header-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+   position: relative;
+  z-index: 3;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+   position: relative;
+  z-index: 3;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+   position: relative;
+  z-index: 3;
+}
+.learn-more-btn:hover {
+  background-color: #f0f0f0;
+}
+ html {
+    scroll-behavior: smooth;
+  }
+
+    .intro {
+      background-color: #ecf0f1;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .intro p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .services {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px;
+  background: #f5f3ef;
+  flex-wrap: wrap; /* changement ici pour un bon responsive */
+}
+
+.carte {
+  flex: 1 1 300px; /* cartes responsives à taille mini de 300px */
+  max-width: 320px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%; /* pour une hauteur uniforme */
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+}
+
+.icone {
+  width: 100px; /* agrandie */
+  height: 120px; /* fixe pour cohérence */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.carte h3 {
+  font-size: 24px;
+  color: #004785;
+  margin-bottom: 15px;
+}
+
+.carte p {
+  font-size: 16px;
+  color: #004785;
+  margin-bottom: 25px;
+  flex-grow: 1; /* permet au paragraphe de s'étirer si besoin */
+}
+
+.decouvrir {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #8cc63f;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 15px;
+}
+
+.decouvrir span {
+  margin-left: 6px;
+}
+
+.carte:hover .decouvrir {
+  color: white;
+  background-color: #76b62b;
+  text-decoration: none;
+}
+
+.icone {
+  width: 100%;
+  max-width: 200px;     /* augmente la largeur max */
+  height: 180px;         /* augmente la hauteur */
+  object-fit: cover;     /* garde une belle apparence */
+  margin-bottom: 20px;
+  border-radius: 8px;    /* optionnel pour des bords arrondis */
+}
+
+
+.carte h3 {
+  font-size: 24px;
+  color: #004785;
+  margin-bottom: 15px;
+}
+
+.carte p {
+  font-size: 16px;
+  color: #004785;
+  margin-bottom: 25px;
+}
+
+.decouvrir {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #8cc63f;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px; /* ← rend le bouton ovale */
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.decouvrir span {
+  margin-left: 6px;
+  footer a {
+      color: #8cc63f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+}
+   footer a {
+      color: #8cc63f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    let currentLang = 'fr';
+
+    function translatePage() {
+      const translateBtn = document.getElementById('translate-btn');
+
+      const translations = {
+        fr: {
+          lang: 'ar', dir: 'rtl',
+          h1: 'حلول خبيرة في بناء الألمنيوم',
+          headerP: 'مرحبًا بكم في عالمنا المتميز في مجال البناء، حيث تلتقي الدقة بالإبداع. نقدم خدمات بناء وصيانة راقية تضمن أن يتجاوز كل مشروع التوقعات ويصمد أمام مرور الزمن.',
+          learnMore: 'اكتشف المزيد', flag: 'gb',
+          buttons: ['خدماتنا', 'معلومات عنا'],
+          servicesTitle: 'خدماتنا',
+          servicesDesc: 'نقدّم مجموعة واسعة من الخدمات في نجارة الألمنيوم، تجمع بين الحرفية التقليدية والتكنولوجيا الحديثة. سواء لمشاريع سكنية أو تجارية، يضمن فريقنا تنفيذ أعمال عالية الجودة ومصممة حسب احتياجاتكم',
+          aboutTitle: 'معلومات عنا',
+          aboutDesc: 'نحن شركة متخصصة في نجارة الألمنيوم، نقدم حلولًا مبتكرة، متينة ومخصصة لجميع أنواع المشاريع. بفضل خبرتنا الطويلة، نجمع بين الجودة والجمالية والأداء لتلبية احتياجات عملائنا بأعلى مستوى من الرضا.',
+          cards: [
+            { title: "واجهات زجاجية", desc: "واجهات أنيقة توفر الضوء والعزل..." },
+            { title: "أبواب", desc: "أبواب متينة وأنيقة..." },
+            { title: "نوافذ", desc: "نوافذ حديثة مع عزل ممتاز..." },
+            { title: "درابزينات السلالم", desc: "درابزينات أنيقة تجمع بين الأمان والجمالية.." },
+            { title: "أسطح زجاجية", desc: "أسطح زجاجية توفر الإضاءة والعزل..." },
+            { title:"كابينات الدش", desc: " مع ألواح زجاجية توفر تصميماً عصرياً وأنيقا.." },
+            { title: "ستائر كهربائية", desc: " توفر ستائرنا الكهربائية فتحًا سلسًا وهادئًا وآليًا..."},
+            { title: "منزل ذكي", desc: "  تجمع حلول المنزل الذكي لدينا بين الراحة ..."},
+            { title: "درابزين زجاجي", desc: "  تم تصميم درابزيناتنا الزجاجية لتجمع بين الأمان..."},
+        ]
+        },
+        ar: {
+          lang: 'en', dir: 'ltr',
+          h1: '		Expert Solutions in Aluminum Construction',
+          headerP: 'Welcome to our world of excellence in construction, where precision meets innovation. We provide high-end construction and maintenance services, ensuring that every project exceeds expectations and stands the test of time.',
+          learnMore: 'Learn More', flag: 'fr',
+          buttons: ['Our Services', 'About Us'],
+          servicesTitle: 'Our Services',
+          servicesDesc: 'We offer a wide range of aluminum joinery services, combining craftsmanship with modern technology. Whether for residential or commercial projects, our team delivers high-quality, custom-made solutions tailored to your needs.',
+          aboutTitle: 'About Us',
+          aboutDesc: 'We are a company specialized in aluminum joinery, providing innovative, durable, and custom solutions for all types of projects. With years of expertise, we combine quality, aesthetics, and performance to fully satisfy our clients.',
+          cards: [
+            { title: "Curtain Walls", desc: "Elegant glass facades with insulation..." },
+            { title: "Doors", desc: "Strong, elegant and secure doors..." },
+            { title: "Windows", desc: "Modern windows with thermal insulation..." },
+            { title: "Stair Railings", desc: "Design and durable railings..." },
+            { title: "Glass Roofs", desc: "Glass roofs offering brightness..." },
+            { title: "Shower Cabins", desc: "Custom tempered glass showers..." },
+            { title: "Electric curtains", desc: "Our electric curtains offer smooth..." },
+            { title: "Smart Home", desc: "Our smart home solutions combine comfort.." },
+            { title: "Aluminum Curtain Walls", desc: "Our aluminum curtain walls combine strength..." },
+          ]
+        },
+        en: {
+          lang: 'fr', dir: 'ltr',
+          h1: '	Solutions expertes en construction d’aluminium',
+          headerP: 'Bienvenue dans notre univers d’excellence en construction, où la précision rencontre l’innovation. Nous fournissons des services de construction et de maintenance haut de gamme, assurant que chaque projet dépasse les attentes et résiste à l’épreuve du temps.',
+          learnMore: 'En savoir plus', flag: 'dz',
+          buttons: ['Nos Services', 'À propos'],
+          servicesTitle: 'Nos services',
+          servicesDesc: 'Nous proposons une large gamme de services dans la menuiserie aluminium, alliant savoir-faire artisanal et technologies modernes. Que ce soit pour des projets résidentiels ou commerciaux, notre équipe assure des réalisations de qualité, sur mesure, adaptées à vos besoins.',
+          aboutTitle: 'À propos de nous',
+          aboutDesc: 'Nous sommes une entreprise spécialisée dans la menuiserie aluminium, offrant des solutions innovantes, durables et sur mesure pour tous types de projets. Forts d’une expertise de plusieurs années, nous combinons qualité, esthétique et performance pour satisfaire pleinement nos clients.',
+          cards: [
+            { title: "Murs-rideaux", desc: "Des façades vitrées élégantes..." },
+            { title: "Portes", desc: "Des portes solides, esthétiques..." },
+            { title: "Fenêtres", desc: "Des fenêtres modernes avec isolation..." },
+            { title: "Rampes d'escalier", desc: "Des rampes d'escaliers design..." },
+            { title: "Toits en verre", desc: "Des verrières et toits en verre..." },
+            { title: "Cabines de douche", desc: "Des cabines de douche sur mesure..." },
+            { title: "Rideaux électriques", desc: "Nos rideaux électriques offrent..." },
+            { title: "Maison intelligente", desc: "Nos solutions de maison intelligente..." },
+            { title: "Garde-corps en verre", desc: "Nos garde-corps en verre sont..." },
+          ]
+        }
+      };
+
+      const t = translations[currentLang];
+      document.documentElement.lang = t.lang;
+      document.body.style.direction = t.dir;
+      document.querySelector('h1').innerText = t.h1;
+      document.querySelector('.header-content p').innerText = t.headerP;
+      document.querySelector('.learn-more-btn').innerText = t.learnMore;
+      translateBtn.innerHTML = `<span class="fi fi-${t.flag}"></span>`;
+      document.querySelectorAll('.header-buttons button')[0].innerText = t.buttons[0];
+      document.querySelectorAll('.header-buttons button')[1].innerText = t.buttons[1];
+      document.querySelector('.intro h2').innerText = t.servicesTitle;
+      document.querySelector('.intro p').innerText = t.servicesDesc;
+      document.querySelector('#about h2').innerText = t.aboutTitle;
+      document.querySelector('#about p').innerText = t.aboutDesc;
+
+      const cardElements = document.querySelectorAll('.carte');
+      t.cards.forEach((card, i) => {
+        if (cardElements[i]) {
+          cardElements[i].querySelector('h3').innerText = card.title;
+          cardElements[i].querySelector('p').innerText = card.desc;
+        }
+      });
+
+      currentLang = t.lang;
+    }
+  </script>
+</head>
+<body>
+  <header>
+   
+     <video autoplay muted loop playsinline class="header-video">
+    <source src="yacine4.mp4" type="video/mp4">
+  </video>
+  <div class="header-content">
+    <h1>Solutions expertes en construction d'aluminium</h1>
+    <p>
+      Bienvenue dans notre univers d’excellence en construction, où la précision rencontre l’innovation. Nous fournissons des services de construction et de maintenance haut de gamme, assurant que chaque projet dépasse les attentes et résiste à l’épreuve du temps.
+    </p>
+    <a href="#services" class="learn-more-btn">En savoir plus</a>
+  </div>
+  <div class="header-overlay"></div>
+    <div class="header-buttons">
+      <button onclick="location.href='#services'">Nos Services</button>
+      <button onclick="location.href='#about'">À propos</button>
+      <button id="translate-btn" onclick="translatePage()"><span class="fi fi-dz"></span></button>
+    </div>
+  </header>
+
+  <section class="intro" id="services">
+    <h2>Nos services</h2>
+    <p>Nous sommes spécialisés dans la conception, la fabrication et l’installation de solutions sur mesure en aluminium : rampes d’escalier, cabines de douche, murs rideaux et toits en verre. Nos produits allient esthétisme, robustesse et isolation thermique pour un confort optimal toute l’année.</p>
+  </section>
+  <section class="services">
+    <div class="carte">
+    <img src="yacine1.jpg" alt="Fenêtres" class="icone">
+    <h3>Murs-rideaux</h3>
+    <p>Des façades vitrées élégantes qui laissent entrer la lumière naturelle tout en assurant une isolation optimale.</p>
+    <a href="mur.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+    </div>
+
+   <div class="carte">
+    <img src="yacine9.jpg" alt="Portes" class="icone">
+    <h3>Portes</h3>
+    <p>Des portes solides, esthétiques et durables, conçues pour offrir sécurité et élégance à votre habitation ou local professionnel.</p>
+    <a href="porte.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+
+   <div class="carte">
+    <img src="yacine8.jpg" alt="Volets" class="icone">
+    <h3>Fenêtres</h3>
+    <p>Des fenêtres modernes avec une excellente isolation thermique et phonique, disponibles en plusieurs styles et coloris.</p>
+    <a href="fenetre.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+
+   <div class="carte">
+    <img src="yacine2.jpg" alt="Stores" class="icone">
+    <h3>Rampes d'escalier </h3>
+    <p>Des rampes d'escaliers design et résistants, parfaits pour un intérieur contemporain ou des espaces extérieurs.</p>
+    <a href="escalier.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+   <div class="carte">
+    <img src="yacine5.jpg" alt="Volets" class="icone">
+    <h3>Toits en verre</h3>
+    <p>Des verrières et toits en verre qui apportent luminosité et modernité, tout en assurant étanchéité et isolation.</p>
+    <a href="toit.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+
+   <div class="carte">
+    <img src="yacine3.jpg" alt="Stores" class="icone">
+    <h3>Cabines de douche</h3>
+    <p>Des cabines de douche sur mesure en verre trempé et profilés en aluminium, alliant confort, esthétisme et facilité d’entretien.</p>
+    <a href="cabine.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+    <div class="carte">
+    <img src="yacine20.jpg" alt="Stores" class="icone">
+    <h3>Rideaux électriques</h3>
+    <p>Des rideaux motorisés élégants et silencieux, contrôlables à distance pour un confort quotidien sans effort.</p>
+    <a href="rideau.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+    <div class="carte">
+    <img src="yacine29.jpg" alt="Stores" class="icone">
+    <h3>Maison intelligente</h3>
+    <p>Une solution connectée et personnalisable qui transforme votre intérieur en un espace intelligent, confortable et sécurisé.</p>
+    <a href="maison.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+   <div class="carte">
+    <img src="yacine13.png" alt="Stores" class="icone">
+    <h3>Garde-corps en verre</h3>
+    <p>Des garde-corps en verre trempé avec structures en inox ou aluminium, alliant transparence, sécurité.</p>
+    <a href="garde.html" class="decouvrir">DÉCOUVRIR <span>&rarr;</span></a>
+   </div>
+  </section>
+
+  <footer id="about">
+    <h2>À propos de nous</h2>
+    <p>Construction Aluminium DZ est une entreprise spécialisée dans la fabrication de 
+      structures en aluminium haut de gamme, destinées aux particuliers et aux professionnels.
+       Fabriqués localement, nos produits garantissent qualité, personnalisation et performance thermique. 
+      Nous mettons un point d'honneur à offrir des solutions durables et esthétiques 
+      qui répondent aux exigences modernes de construction.</p>
+  Vous avez une question ? 
+  <a href="contact.html">Contactez-nous</a> 
+  ou appelez le 
+  <a href="tel:+213556134690">+213 556134690</a> 
+  ou 
+  <a href="tel:+213662452255">+213 662452255</a> 
+<p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:constructionallualgerie@gmail.com">constructionallualgerie@gmail.com</a>
+    <br>
+  
+  </p>
+  <p>
+    <a href="https://www.tiktok.com/@constructionallualgerie" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok" style="font-size: 1.5em; margin-right: 8px;"></i>
+      Suivez-nous sur TikTok
+    </a>
+  </p>
+  <p>&copy; 2025 Construction Aluminium DZ. Tous droits réservés.</p>
+
+  </footer>
+</body>
+</html>
