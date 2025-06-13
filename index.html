@@ -28,7 +28,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    flex-direction: column;
+    flex-direction: row;       /* ← horizontal */
+    flex-wrap: wrap;           /* ← retour à la ligne si nécessaire */
+    justify-content: flex-end; /* ← aligne à droite */
     gap: 6px;
     z-index: 9999;
   }
