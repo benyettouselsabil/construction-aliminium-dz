@@ -21,13 +21,25 @@ header {
   text-align: center;
   position: relative;
 }
-.logo {
-  width: clamp(8rem, 30vw, 15rem); /* min: 8rem (~128px), max: 15rem (~240px) */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 1rem;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center horizontally */
+  gap: 1.5rem; /* space between logo and title */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
+
+.logo {
+  width: clamp(4rem, 10vw, 8rem); /* Responsive logo size */
+  height: auto;
+}
+
+.site-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive title */
+  color: white;
+  margin: 0;
+}
+
 
 #language-selector {
   position: absolute;
@@ -100,12 +112,25 @@ header {
     font-weight: bold;
     position: relative;
   }
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px; /* space between logo and title */
+  padding-left: 40px;
+}
+
 .logo {
-  max-width: 180px;
+  width: 80px;
   height: auto;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 10px;
+}
+
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
 }
   #language-selector {
     position: absolute;
@@ -196,8 +221,10 @@ header {
 <body>
 
   <header>
-    <span id="site-title">Construction Aluminium DZ</span>
-<img src="yacine30.jpg" alt="IDM-BEN Technologie Logo" class="logo">
+      <div class="header-content">
+    <img src="yacine30.jpg" alt="IDM-BEN Technologie Logo" class="logo">
+    <h1 class="site-title">IDM-BEN Technologie</h1>
+  </div>
     <select id="language-selector">
       <option value="fr">Français</option>
       <option value="en">English</option>
