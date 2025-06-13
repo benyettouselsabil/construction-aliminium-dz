@@ -136,25 +136,28 @@ header {
     font-size: 26px;          /* titre plus visible */
   }
 
+
 .back-button {
   display: block;
   width: 90%;
   max-width: 40rem;
-  font-size: clamp(2rem, 6vw, 4rem); /* Taille du texte fluide */
-  padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 6vw, 2.5rem); /* Padding fluide */
+  font-size: clamp(1.5rem, 5vw, 2.5rem);         /* Texte très lisible */
+  padding: clamp(1.2rem, 4vw, 2rem) clamp(2rem, 6vw, 3.5rem);  /* Padding généreux */
   background-color: #8cc63f;
   color: white;
-  border-radius: 3rem;
+  border-radius: 5rem;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  margin: clamp(1rem, 5vw, 2rem) auto;
-  transition: background 0.3s;
+  margin: clamp(1rem, 5vw, 3rem) auto;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .back-button:hover {
   background-color: #76b82a;
+  transform: scale(1.03);
 }
+
 
 
   .description {
