@@ -25,11 +25,12 @@
   }
 
   .header-buttons {
+    position: absolute;
     top: 10px;
     right: 10px;
     flex-direction: column;
     gap: 6px;
-    z-index: 10; /* s'assure qu'ils sont au-dessus */
+    z-index: 9999;
   }
 
   .header-buttons button {
@@ -37,8 +38,20 @@
     padding: 8px 12px;
   }
 
+  .header-content {
+    pointer-events: none; /* << empêche le bloc de bloquer les clics */
+    padding-top: 40px;
+    z-index: 2;
+  }
+
+  .header-content h1,
+  .header-content p,
+  .learn-more-btn {
+    pointer-events: auto; /* << on peut cliquer sur ces éléments */
+  }
+
   .header-content h1 {
-    font-size: clamp(1.8rem ,calc(7vw + 1rem), 5rem); /* plus petit titre */
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
     margin-bottom: 10px;
   }
 
@@ -50,11 +63,6 @@
   .learn-more-btn {
     font-size: 0.85rem;
     padding: 8px 20px;
-  }
-
-  .header-content {
-    padding-top: 40px;
-    z-index: 2;
   }
 }
 
