@@ -79,25 +79,23 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
-.back-button {
-  display: block;
-  width: 90%;
-  max-width: 420px;
-  font-size: clamp(1.2rem, 5vw, 1.8rem); /* taille fluide : min 1.2rem, max 1.8rem */
-  padding: clamp(12px, 4vw, 20px) clamp(20px, 6vw, 36px); /* padding fluide */
-  margin: 30px auto;
-  text-align: center;
-  background-color: #8cc63f;
-  color: white;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+ .back-button {
+      display: inline-block;
+      background-color: #8cc63f;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      text-align: center;
+      margin: 30px auto;
+    }
 
-.back-button:hover {
-  background-color: #76b82a;
-}
+    .back-button:hover {
+      background-color: #76b82a;
+    }
+
 
 
   footer {
@@ -117,29 +115,45 @@
   /* 🎯 Responsive version mobile */
   /* ----------------------------- */
  @media (max-width: 768px) {
-  header {
-    font-size: 32px;          /* agrandit le texte */
-    padding: 35px 15px;       /* plus de hauteur */
-  }
-
-  #language-selector {
-    font-size: 16px;
-    padding: 6px 8px;
-  }
+header {
+  background-color: #004785;
+  color: white;
+  padding: clamp(16px, 4vw, 32px);
+  text-align: center;
+  position: relative;
+}
+#language-selector {
+  position: absolute;
+  top: clamp(8px, 2vw, 20px);
+  right: clamp(8px, 3vw, 24px);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  padding: clamp(4px, 1vw, 8px) clamp(6px, 2vw, 12px);
+  border-radius: 6px;
+}
 
   h1 {
     font-size: 26px;          /* titre plus visible */
   }
 
   .back-button {
-    display: block;
-    font-size: 20px;          /* texte plus grand */
-    padding: 18px 30px;       /* plus gros bouton */
-    width: 90%;
-    max-width: 400px;
-    margin: 30px auto;
-    border-radius: 40px;
-  }
+  display: block;
+  width: 90%;
+  max-width: 420px;
+  font-size: clamp(1.2rem, 5vw, 1.8rem); /* taille fluide : min 1.2rem, max 1.8rem */
+  padding: clamp(12px, 4vw, 20px) clamp(20px, 6vw, 36px); /* padding fluide */
+  margin: 30px auto;
+  text-align: center;
+  background-color: #8cc63f;
+  color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background-color: #76b82a;
+}
 
   .description {
     font-size: 18px;
