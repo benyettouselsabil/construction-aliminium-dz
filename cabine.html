@@ -21,6 +21,13 @@ header {
   text-align: center;
   position: relative;
 }
+.logo {
+  width: clamp(8rem, 30vw, 15rem); /* min: 8rem (~128px), max: 15rem (~240px) */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
 
 #language-selector {
   position: absolute;
@@ -93,7 +100,13 @@ header {
     font-weight: bold;
     position: relative;
   }
-
+.logo {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
   #language-selector {
     position: absolute;
     top: 20px;
@@ -184,6 +197,7 @@ header {
 
   <header>
     <span id="site-title">Construction Aluminium DZ</span>
+<img src="logo.jpg" alt="IDM-BEN Technologie Logo" class="logo">
     <select id="language-selector">
       <option value="fr">Français</option>
       <option value="en">English</option>
